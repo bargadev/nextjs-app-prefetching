@@ -1,13 +1,8 @@
 // @ts-nocheck
 'use client'
 
-import { queryOptions, useQuery } from '@tanstack/react-query'
-
-const pokemonOptions = queryOptions({
-  queryKey: ['pokemon'],
-  queryFn: async () => { },
-
-})
+import { useQuery } from '@tanstack/react-query'
+import { pokemonOptions } from './pokemon'
 
 
 export function PokemonInfo() {
