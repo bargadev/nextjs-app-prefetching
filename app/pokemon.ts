@@ -1,10 +1,12 @@
-import { queryOptions } from '@tanstack/react-query'
+import { queryOptions } from "@tanstack/react-query";
 
 export const pokemonOptions = queryOptions({
-  queryKey: ['pokemon'],
+  queryKey: ["pokemon"],
   queryFn: async () => {
-    const response = await fetch('https://pokeapi.co/api/v2/pokemon/25')
+    const response = await fetch("https://pokeapi.co/api/v2/pokemon/25");
 
-    return response.json()
+    console.log(`response ===>`, response);
+
+    return response.json();
   },
-})
+});
