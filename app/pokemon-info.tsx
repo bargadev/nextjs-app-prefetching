@@ -1,7 +1,7 @@
 // @ts-nocheck
 'use client'
 
-import { queryOptions, useSuspenseQuery } from '@tanstack/react-query'
+import { queryOptions, useQuery } from '@tanstack/react-query'
 
 const pokemonOptions = queryOptions({
   queryKey: ['pokemon'],
@@ -11,7 +11,9 @@ const pokemonOptions = queryOptions({
 
 
 export function PokemonInfo() {
-  const { data } = useSuspenseQuery(pokemonOptions)
+  const { data } = useQuery(pokemonOptions)
+
+  console.log('data: ', data)
 
   return (
     <div>
